@@ -1,1 +1,27 @@
+html {
+  font-family: sans-serif;
+}
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.card {
+  height: fit-content;
+  font-size: 40px;
+  border: 3px solid black;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 15px 40px;
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 150ms;
+}
+
+.card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
