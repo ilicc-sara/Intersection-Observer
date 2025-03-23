@@ -38,12 +38,20 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
-// function loadNewCards() {
-//   for (let i = 0; i < 10; i++) {
-//     const card = document.createElement("div");
-//     card.textContent = "New Card";
-//     card.classList.add("card");
-//     observer.observe(card);
-//     cardContaner.append(card);
-//   }
-// }
+const randomNum = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
+
+const randomColor = () =>
+  `rgb(${randomNum(0, 225)}, ${randomNum(0, 255)}, ${randomNum(0, 255)})`;
+// console.log(randomColor());
+
+function loadNewCards() {
+  for (let i = 0; i < 10; i++) {
+    const card = document.createElement("div");
+    card.style.backgroundColor = randomColor();
+    card.textContent = "New Card";
+    card.classList.add("card");
+    observer.observe(card);
+    cardContaner.append(card);
+  }
+}
