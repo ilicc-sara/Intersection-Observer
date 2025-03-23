@@ -38,12 +38,12 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
-function loadNewCards() {
-  for (let i = 0; i < 10; i++) {
-    const card = document.createElement("div");
-    card.textContent = "New Card";
-    card.classList.add("card");
-    observer.observe(card);
-    cardContaner.append(card);
-  }
-}
+// function loadNewCards() {
+//   for (let i = 0; i < 10; i++) {
+//     const card = document.createElement("div");
+//     card.textContent = "New Card";
+//     card.classList.add("card");
+//     observer.observe(card);
+//     cardContaner.append(card);
+//   }
+// }
